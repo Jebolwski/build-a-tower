@@ -9,6 +9,15 @@ for (let index = 25; index > 0; index--) {
   game.append(slider);
 }
 
+const MAX_THREE = ["14", "6", "2"];
+
+let game_scores = document.querySelector(".game__scores");
+// for (i in MAX_THREE) {
+//   let score = document.createElement("h3");
+//   score.innerHTML = MAX_THREE[i];
+//   game_scores.appendChild(score);
+// }
+
 const StopSliding = (sliderindex) => {
   if (sliderindex < 26) {
     let width = 320;
@@ -74,6 +83,9 @@ const StopSliding = (sliderindex) => {
         sliderindex != 1
       ) {
         alert("You lose");
+        for (i in MAX_THREE) {
+          console.log(i);
+        }
         window.location.reload();
       } else {
         //?ALIGNING SLIDERS FROM LEFT
@@ -103,6 +115,11 @@ const StopSliding = (sliderindex) => {
       "onclick",
       "StopSliding(" + parseInt(sliderindex + 1) + ")"
     );
-    document.querySelector(".game__score").innerHTML = sliderindex + 1;
+    document.querySelector(".game__score").innerHTML = sliderindex;
   }
 };
+document.addEventListener("keydown", (event) => {
+  if (event.key == " ") {
+    document.querySelector(".game__btn").click();
+  }
+});

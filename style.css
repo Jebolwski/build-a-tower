@@ -3,8 +3,10 @@
 }
 
 .game {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .game__kid {
@@ -19,6 +21,9 @@
 .game__btn {
   background-color: darkred;
   margin-top: 10px;
+  position: absolute;
+  bottom: -45px;
+  left: 170px;
   padding: 5px 14px;
   font-size: 16px;
   color: white;
@@ -36,6 +41,7 @@
   background-color: red;
   border: 1px solid darkred;
   height: 10px;
+  border-radius: 8px;
   visibility: hidden;
 }
 

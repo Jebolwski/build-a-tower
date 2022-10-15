@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
+
   <body>
     <div class="game">
+      <div class="game__scores"></div>
       <div class="game__kid">
-        <div class="game__score">1</div>
+        <div class="game__score">0</div>
         <div class="game__sliders"></div>
+        <button class="game__btn" onclick="StopSliding(1)">Stop!</button>
       </div>
-      <button class="game__btn" onclick="StopSliding(1)">Stop!</button>
     </div>
     <script src="script.js"></script>
   </body>
