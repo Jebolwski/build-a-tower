@@ -1,0 +1,72 @@
+:root {
+  --width: 320px;
+}
+
+.game {
+  display: grid;
+  place-items: center;
+}
+
+.game__kid {
+  position: relative;
+  width: 400px;
+  height: 550px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 17px 0px rgba(163, 163, 163, 1);
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.game__btn {
+  background-color: darkred;
+  margin-top: 10px;
+  padding: 5px 14px;
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.game__btn:hover {
+  background-color: greenyellow;
+}
+
+.slider {
+  position: relative;
+  background-color: red;
+  border: 1px solid darkred;
+  height: 10px;
+  visibility: hidden;
+}
+
+.slider1 {
+  visibility: visible;
+}
+
+.game__sliders {
+  position: absolute;
+  bottom: 0;
+}
+
+.game__score {
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.animate {
+  animation: slide 3s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: var(--width);
+  }
+  100% {
+    left: 0;
+  }
+}
